@@ -108,7 +108,6 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 .header-social-links {
   margin-left: 20px;
-  border-left: 1px solid #c4c4c4;
 }
 .header-social-links a {
   color: #a0a0a0;
@@ -220,6 +219,14 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 100%;
   visibility: visible;
+}
+.nav-img {
+  margin-left: 20px;
+}
+@media (max-width: 768px) {
+  .nav-img {
+    margin-left: 10px;
+  }
 }
 @media (max-width: 1366px) {
   .navbar .dropdown .dropdown ul {
@@ -344,26 +351,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .carousel-container {
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
   position: absolute;
   bottom: 60px;
-  top: 70px;
-  left: 55px;
-  right: 55px;
+  top: 300px;
+  left: 100px;
+  right: 500px;
 }
 #hero .carousel-content {
-  background: rgba(4, 4, 4, 0.7);
   padding: 20px;
   color: #fff;
-  border-top: 5px solid #feac4a
-;
 }
 #hero .carousel-content h2 {
   color: #fff;
   margin-bottom: 20px;
-  font-size: 28px;
+  font-size: 50px;
   font-weight: 700;
+}
+#hero .carousel-content p {
+  font-size: 20px;
 }
 #hero .btn-get-started {
   font-family: "Roboto", sans-serif;
@@ -432,7 +437,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .carousel-indicators li {
   cursor: pointer;
-  background: #fff;
+  background: rgba(255, 255, 255, 0);
   overflow: hidden;
   border: 0;
   width: 12px;
@@ -443,7 +448,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero .carousel-indicators li.active {
   opacity: 1;
-  background: #feac4a
+  background: #fead4a00
 ;
 }
 @media (min-width: 1024px) {
@@ -456,11 +461,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (max-width: 992px) {
   #hero .carousel-container {
-    top: 58px;
+    top: 60%;
+    left: 50px;
+    right: 50px;
   }
   #hero .carousel-content h2 {
     margin-bottom: 15px;
-    font-size: 22px;
+    font-size: 30px;
   }
   #hero .carousel-content p {
     font-size: 15px;
@@ -515,11 +522,10 @@ section {
 # Breadcrumbs
 --------------------------------------------------------------*/
 .breadcrumbs {
-  padding: 15px 0;
-  background: #feac4a
-;
+  padding: 20px;
+  background: #feac4a;
   min-height: 40px;
-  margin-top: 72px;
+  margin-top: 80px;
 }
 .breadcrumbs h2 {
   margin-top:10px
@@ -1384,10 +1390,13 @@ section {
 .blog .entry {
   padding: 30px;
   margin-bottom: 60px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px 1px #ddd;
+}
+.blog .entry:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 .blog .entry .entry-img {
-  max-height: 440px;
+  max-height: 330px;
   margin: -30px -30px 20px -30px;
   overflow: hidden;
 }
@@ -1811,7 +1820,7 @@ section {
   background: #111;
 }
 #footer .footer-top {
-  padding: 60px 0 30px 0;
+  padding: 60px 20px 30px 20px;
   background: #1e1e1e;
 }
 #footer .footer-top .footer-contact {
@@ -1942,3 +1951,85 @@ section {
   color: #fff;
   text-decoration: none;
 }
+
+
+/* Jobs Description */
+
+.area-title .single-job-post {
+  box-shadow: 0 0 6px 1px #ddd;
+  display: flex;
+  margin: 100px;
+  padding: 40px;
+  position: relative;
+}
+.area-title .single-job-post h2{
+  color: #feac4a;
+}
+.area-title .single-job-post table{
+  border: none;
+  font-size: 20px;
+}
+.area-title .single-job-post table .first-td{
+  width: 250px;
+}
+.job-description{
+  margin: 70px;
+  padding: 40px;
+}
+.job-description h3{
+  color: #feac4a;
+}
+.job-description hr{
+  color: #feac4a;
+  height: 3px;
+}
+.job-description ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.job-description .ri-check-double-line{
+  color: #feac4a;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .area-title .single-job-post {
+    box-shadow: 0 0 6px 1px #ddd;
+    display: flex;
+    margin: 40px;
+    padding: 20px;
+    position: relative;
+  }
+  .area-title .single-job-post table{
+    border: none;
+    font-size: 15px;
+  }
+  .area-title .single-job-post table .first-td{
+    width: 150px;
+  }
+  .job-description{
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
+/* Button */
+.accent-button a {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: capitalize;
+  background-color: #feac4a;
+  display: inline-block;
+  height: 44px;
+  line-height: 44px;
+  padding: 0px 25px;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.accent-button a:hover {
+  background-color: #ffe6c7;
+  color: #000000;
+}
+
